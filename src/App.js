@@ -40,7 +40,7 @@ function App() {
     <>
       <Global $darkMode={nightMode} />
       <div className="App" style={backgroundStyle}>
-        <BrowserRouter>
+        <BrowserRouter basename="/portfolio">
           <ScrollToTop />
           {!loading ? (
             <div className="snakeWrapper">
@@ -66,7 +66,6 @@ function App() {
                   <Route path="viber" element={<Viber />} />
                 </Route>
                 <Route path="*" element={<NotFound />} />
-                {/* </Route> */}
               </Routes>
             </>
           )}
